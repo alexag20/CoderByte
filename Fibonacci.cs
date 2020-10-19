@@ -18,12 +18,19 @@ public class Program
 			}
 			else
 			{
-				ulong fiboNum = firstNum + lastNum;
-				
-				Console.Write(", " + fiboNum);
-				
-				firstNum = lastNum;
-				lastNum = fiboNum;
+				try
+				{
+					ulong fiboNum = firstNum + lastNum;
+
+					Console.Write(", " + fiboNum);
+
+					firstNum = lastNum;
+					lastNum = fiboNum;
+				}
+				catch (Exception ex)
+				{
+					throw ex;
+				}
 			}
 		}
 		
